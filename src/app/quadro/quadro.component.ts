@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Cor } from './cores/cor.model';
 
 
 @Component({
@@ -13,23 +14,28 @@ export class QuadroComponent implements OnInit {
 
   @Input() id: string;
   @Input() preco: number;
-  @Input() cor: string;
+  @Input() cor = 'black';
   @Input() altura: number;
   @Input() largura: number;
   @Input() position: object;
 
+  larguraQuadro: number;
+  alturaQuadro: number;
+  constructor() {
 
-  constructor() { }
-
-  ngOnInit() {
   }
 
+  ngOnInit() {
+    this.larguraQuadro = (this.largura * 0.6);
+    this.alturaQuadro = (this.altura * 0.6);
+ }
+
   onStart(event) {
-    console.log('started output:', event);
+    // console.log('started output:', event);
   }
 
   onStop(event) {
-    console.log('stopped output:', event);
+    // console.log('stopped output:', event);
   }
 
   onMoving(event) {
@@ -43,11 +49,14 @@ export class QuadroComponent implements OnInit {
   }
 
   alteraOrientacao() {
-    console.log("Pedido de alteracao da orientacao recebido");
-    let altura = this.altura;
-    let largura = this.largura;
-    this.largura = altura;
-    this.altura = largura;
+    console.log('Pedido de alteracao da orientacao recebido.');
+    this.larguraQuadro = this.larguraQuadro === (this.largura * 0.6) ? (this.altura * 0.6) : (this.largura * 0.6);
+    this.alturaQuadro = this.alturaQuadro === (this.altura * 0.6) ? (this.largura * 0.6) : (this.altura * 0.6);
+  }
+
+  alteraCor(cor: string) {
+    console.log('Perdido de alteração de cor da borda.', cor);
+    this.cor = cor;
   }
 
 }

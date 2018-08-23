@@ -10,6 +10,9 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { QuadroComponent } from './quadro/quadro.component';
 import { MenuComponent } from './quadro/menu/menu.component';
+import { ThumbComponent } from './quadro/thumb/thumb.component';
+import { CoresComponent } from './quadro/cores/cores.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,13 +20,16 @@ import { MenuComponent } from './quadro/menu/menu.component';
     SidebarComponent,
     QuadroComponent,
     MenuComponent,
+    ThumbComponent,
+    CoresComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
-    AngularDraggableModule
+    AngularDraggableModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
