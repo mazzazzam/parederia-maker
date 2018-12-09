@@ -1,0 +1,129 @@
+nav {
+    width: 100%;
+    height: 300px;
+    bottom: 0;
+    position: absolute;
+    background-color: rgb(230, 229, 225);
+    list-style: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+
+    z-index: 10;
+}
+$fator: 0.3;
+
+$molduraespessura: 4px;
+
+
+%defaults {
+
+    background-color: rgba(219, 219, 219, 0.411);
+    border-style: solid;
+    border-color: rgb(134, 134, 134);
+    border-width: $molduraespessura;
+    flex-shrink: 0;
+    // flex-basis: auto;
+    margin: 10px;
+
+
+}
+
+.thumb_a2 {
+    @extend %defaults;
+    width: 440px * $fator;
+    height: 615px * $fator;
+}
+
+.thumb_a3 {
+    @extend %defaults;
+    width: 320px * $fator;
+    height: 440px * $fator;
+}
+
+.thumb_pro30x40 {
+    @extend %defaults;
+    width: 320px * $fator;
+    height: 420px * $fator;
+}
+
+.thumb_a4 {
+    @extend %defaults;
+    width: 230px * $fator;
+    height: 320px * $fator;
+}
+
+.thumb_a5 {
+    @extend %defaults;
+    width: 170px * $fator;
+    height: 230px * $fator;
+}
+
+.thumb_30x30 {
+    @extend %defaults;
+    width: 300px * $fator;
+    height: 300px * $fator;
+}
+
+.thumb_25x25 {
+    @extend %defaults;
+    width: 250px * $fator;
+    height: 250px * $fator;
+}
+
+.thumb_20x20 {
+    @extend %defaults;
+    width: 200px * $fator;
+    height: 200px * $fator;
+}
+
+.thumb_15x15 {
+    @extend %defaults;
+    width: 150px * $fator;
+    height: 150px * $fator;
+}
+
+.thumb_quadrado {
+    @extend %defaults;
+    width: 120px * $fator;
+    height: 120px * $fator;
+}
+
+.thumb_fotogramma {
+    @extend %defaults;
+    width: 170px * $fator;
+    height: 120px * $fator;
+}
+
+.thumb_20x15 {
+    @extend %defaults;
+    width: 150px * $fator;
+    height: 200px * $fator;
+}
+
+.thumb_20x25 {
+    @extend %defaults;
+    width: 250px * $fator;
+    height: 200px * $fator;
+}
+
+.thumb_panorama {
+    @extend %defaults;
+    width: 200px * $fator;
+    height: 440px * $fator;
+}
+
+.thumb_wide {
+    @extend %defaults;
+    width: 120px * $fator;
+    height: 440px * $fator;
+}

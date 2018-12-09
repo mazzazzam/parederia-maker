@@ -13,6 +13,7 @@ import { MenuComponent } from './quadro/menu/menu.component';
 import { ThumbComponent } from './quadro/thumb/thumb.component';
 import { CoresComponent } from './quadro/cores/cores.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BottommenuComponent } from './bottommenu/bottommenu.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     MenuComponent,
     ThumbComponent,
     CoresComponent,
+    BottommenuComponent,
   ],
   imports: [
     BrowserModule,

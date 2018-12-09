@@ -12,7 +12,7 @@ export class MenuComponent implements OnInit {
   items: Array<Item> = [
     new Item({id: 'color', symbol: '/assets/img/pick_color.svg'}),
     new Item({id: 'upload', symbol: '/assets/img/upload_pic.svg'}),
-    new Item({id: 'rotate', symbol: '/assets/img/rotate.svg'}),
+    new Item({id: 'rotate', symbol: '/assets/img/rotate.svg', action: '(click)="alterarOrientacao($event)"'}),
     new Item({id: 'delete', symbol: '/assets/img/delete.svg'})
   ];
 

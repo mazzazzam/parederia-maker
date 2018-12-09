@@ -3,6 +3,8 @@
     <mk-sidebar [state]="menuState" (clicadoQuadro)="quadroNaParede($event)"></mk-sidebar>
     <!-- endsidebar -->
 
+    <mk-bottommenu></mk-bottommenu>
+
     <div id="content" [style.position]="(menuState === 'show') ? 'relative' : 'fixed'">
         <!-- nav do centro -->
         <nav class="">
